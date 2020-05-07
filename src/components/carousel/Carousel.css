@@ -1,0 +1,26 @@
+.carousel {
+    background: black;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black !important;
+    border-radius: 50% 50% !important;
+    background-size: 50% !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.carousel-caption {
+    background: #0000008f;
+    width: 100%;
+    right: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+}
+
+.carousel-item .carousel-image {
+    height: 100vh;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
