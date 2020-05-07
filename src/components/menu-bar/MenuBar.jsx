@@ -8,7 +8,7 @@ export default function MenuBar() {
         <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top">
             <Navbar.Brand href="#home">
                 <img
-                    src={process.env.PUBLIC_URL + 'images/logo-light.png'}
+                    src={process.env.PUBLIC_URL + '/images/logo-light.png'}
                     width="200"
                     height="100"
                     className="d-inline-block align-top"
