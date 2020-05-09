@@ -1,16 +1,16 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { ManuBarItems } from './MenuItems';
 import './MenuBar.css';
 
-export default function MenuBar() {
+export default function MenuBar(props) {
+
     return (
-        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top">
-            <Navbar.Brand href="#home">
+        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top" >
+            <Navbar.Brand href="home">
                 <img
                     src={process.env.PUBLIC_URL + '/images/logo-light.png'}
-                    width="200"
-                    height="100"
+                    width="100"
+                    height="50"
                     className="d-inline-block align-top"
                     alt="yours truly theater logo"
                 />
@@ -19,14 +19,14 @@ export default function MenuBar() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="menu-items-container">
                     {
-                        ManuBarItems.map((item, index) => {
+                        props.menuBarItems.map((item, index) => {
                             if (item.type === "link") {
-                                return <Nav.Link href={`#${item.href}`}>{item.name}</Nav.Link>
+                                return <Nav.Link key={item.name} href={item.path}>{item.name}</Nav.Link>
                             } else {
-                                return <NavDropdown active={true} title={item.name} id={`basic-nav-dropdown-${index}`}>
+                                return <NavDropdown key={item.name} active={true} title={item.name} id={`basic-nav-dropdown-${index}`}>
                                     {
                                         item.dropdownItems.map((dropdownItem) => {
-                                            return <NavDropdown.Item href={`#${dropdownItem.href}`}>{dropdownItem.name}</NavDropdown.Item>
+                                            return <NavDropdown.Item key={dropdownItem.name} href={dropdownItem.path}>{dropdownItem.name}</NavDropdown.Item>
                                         })
                                     }
                                 </NavDropdown>

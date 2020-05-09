@@ -8,7 +8,7 @@ export default function Carousel() {
         <BootstrapCarousel>
             {
                 carouselItems.map((item) => {
-                    return <BootstrapCarousel.Item>
+                    return <BootstrapCarousel.Item key={item.id}>
                         <div className="d-block w-100 carousel-image" style={{backgroundImage:`url(${process.env.PUBLIC_URL}/images/${item.imgSrc}`}}></div>
                         <BootstrapCarousel.Caption>
                             <h3>{item.title}</h3>

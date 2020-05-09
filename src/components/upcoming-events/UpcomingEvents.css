@@ -1,0 +1,21 @@
+.events-control-prev, .events-control-next {
+    background: transparent;
+    border: none;
+}
+
+.events-container-heading {
+    border: 4px solid black;
+    background-clip: padding-box;
+    border-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI1IiB3aWR0aD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTBIM1YzaDdWMEgwWk0xNSAwdjNoN3Y3aDNWMFpNMCAxNVYyNUgxMFYyMkgzdi03em0yMiAwdjdoLTd2M0gyNVYxNVoiLz48L3N2Zz4=) 10 repeat;
+    border-image-outset: 0;
+    border-image-width: 3;
+    background-image: repeating-linear-gradient(45deg, #FFF 0, #FFF 10px, #EEE 0, #EEE 20px);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.card {
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+}

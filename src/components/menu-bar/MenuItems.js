@@ -1,67 +1,94 @@
-export const ManuBarItems = [
+import { lazy } from 'react';
+
+const HomePage = lazy(() => import('../../views/HomePage'));
+
+export const MenuBarItems = [
+    {
+        type: "link",
+        name: "Home",
+        path: "/home",
+        component: HomePage
+    },
     {
         type: "link",
         name: "About Us",
-        href: "Link1"
+        path: "/Link1",
+        component: HomePage
+
     },
     {
         type: "dropdown",
         name: "Shows",
+        path: "/shows",
+        component: HomePage,
         dropdownItems: [
             {
                 name: "Playback shows",
-                href: "Link9"
+                path: "/Link9",
+                component: HomePage
             },
             {
                 name: "Theater productions",
-                href: "Link10"
+                path: "/Link10",
+                component: HomePage
             }
         ]
     },
     {
         type: "dropdown",
         name: "List Of Programmes",
+        path: "/list-of-programmes",
+        component: HomePage,
         dropdownItems: [
             {
                 name: "Basic theater workshop",
-                href: "Link4"
+                path: "/Link4",
+                component: HomePage
             },
             {
                 name: "Life unscripted",
-                href: "Link5"
+                path: "/Link5",
+                component: HomePage
             },
             {
                 name: "Workshop for children",
-                href: "Link6"
+                path: "/Link6",
+                component: HomePage
             },
             {
-                name:"Gift a show",
-                href:"link11"
+                name: "Gift a show",
+                path: "/link11",
+                component: HomePage
             },
             {
-                name: "YT rentels",
-                href:"link12"
+                name: "YT rentals",
+                path: "/link12",
+                component: HomePage
             }
         ]
     },
     {
-        type:"link",
-        name:"Gallery",
-        href:"link7"
+        type: "link",
+        name: "Gallery",
+        path: "/link7",
+        component: HomePage
     },
     {
-        type:"link",
-        name:"In Media",
-        href:"link8"
+        type: "link",
+        name: "In Media",
+        path: "/link8",
+        component: HomePage
     },
     {
-        type:"link",
-        name:"Join us",
-        href:"link13"
+        type: "link",
+        name: "Join us",
+        path: "/link13",
+        component: HomePage
     },
     {
         type: "link",
         name: "Contact us",
-        href: "Link3"
+        path: "/Link3",
+        component: HomePage
     }
 ]

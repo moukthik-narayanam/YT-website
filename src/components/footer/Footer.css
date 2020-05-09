@@ -1,0 +1,30 @@
+.footer-container {
+    background: #c5c5c5;
+}
+
+.subscribe-text {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.seperator-line {
+    border: 1px solid black;
+}
+
+.list-group-item {
+    background: transparent !important;
+    border: 0px;
+    padding: .5rem 1.25rem !important;
+}
+
+.list-group-item:first-child {
+    border-bottom: 1px solid #a09e9e;
+    padding-top: 0 !important;
+    white-space: nowrap;
+}
+
+.disclaimer {
+    font-size: 12px;
+    text-align: center;
+}
