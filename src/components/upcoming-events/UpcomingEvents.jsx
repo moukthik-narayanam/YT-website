@@ -1,9 +1,14 @@
 import React from 'react';
 import { Container, Col, Card, Button, Row } from 'react-bootstrap';
 import './UpcomingEvents.css';
+import { useHistory } from 'react-router-dom';
 // import { eventsList } from './eventsList';
 
 export default function UpcomingEvents() {
+    const history = useHistory();
+    function handleMoreEvents(){
+        // history.push("")
+    }
     const eventsList = [1, 2, 3];
     // const activeList = 
     return (
@@ -36,7 +41,7 @@ export default function UpcomingEvents() {
             </Row>
             <Row className="justify-content-md-center mb-4">
                 <Col md={4} className="text-center">
-                    <Button className="text-secondary" variant="link" href="more-events">For more events >></Button>
+                    <Button className="text-secondary" variant="link" onClick={handleMoreEvents}>For more events >></Button>
                 </Col>
             </Row>
         </Container>
