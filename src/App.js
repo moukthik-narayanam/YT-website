@@ -8,10 +8,9 @@ import Footer from "./components/footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-const basename = process.env.NODE_ENV === 'production' ? `/YT-website` : '/';
 
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
       <Suspense fallback={"Loading"}>
         <MenuBar menuBarItems={MenuBarItems} />
         <Suspense fallback={"Loading"}>
