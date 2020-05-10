@@ -2,3 +2,7 @@
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
 }
+
+.accordion-container{
+    display: grid;
+}

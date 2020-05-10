@@ -27,7 +27,7 @@ export default function YTMembers() {
 
     return (
         <Container className="py-4 px-1 mt-2">
-            <Accordion defaultActiveKey="0" onSelect={handleSelect}>
+            <Accordion defaultActiveKey="0" onSelect={handleSelect} className="accordion-container">
                 {MembersList.map((group, index) => {
                     const icon = openId === `${index}` ? 'remove' : 'add';
                     const titleClass = openId === `${index}` ? 'text-danger' : '';

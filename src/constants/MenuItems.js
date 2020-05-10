@@ -15,7 +15,7 @@ export const MenuBarItems = [
     {
         type: "link",
         name: "About Us",
-        path: "/Link1",
+        path: "/about-us",
         listInMenu : true,
         component: AboutUs
 
