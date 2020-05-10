@@ -1,8 +1,7 @@
 import React from "react";
-import Carousel from "../components/carousel/Carousel";
+import Carousel from "../../components/carousel/Carousel";
 import "./HomePage.css";
-import Footer from "../components/footer/Footer";
-import UpcomingEvents from "../components/upcoming-events/UpcomingEvents";
+import UpcomingEvents from "../../components/upcoming-events/UpcomingEvents";
 import { Jumbotron } from "react-bootstrap";
 
 export default function HomePage() {
@@ -27,7 +26,7 @@ export default function HomePage() {
                 <br />We believe in taking theatre to the people, right from the auditoriums to offices to campuses to apartment terraces to resorts to old age homes to hospices with an aim to reach out to not only the common man but also to people who don't have opportunity to watch plays.
             </Jumbotron>
             <UpcomingEvents />
-            <Footer />
+            
         </>
     )
 }

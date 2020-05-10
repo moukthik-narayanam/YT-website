@@ -1,0 +1,8 @@
+.details-opening-line::first-letter {
+    font-size: 300%;
+    color: #dc1515;
+  }
+
+  .yt-details-container{
+      background-color: aliceblue;
+  }

@@ -9,7 +9,7 @@ export default function MenuBar(props) {
         history.push(route);
     }
     return (
-        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top" >
+        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top" className="position-sticky" >
             <Navbar.Brand href="home">
                 <img
                     src={process.env.PUBLIC_URL + '/images/logo-light.png'}
@@ -23,7 +23,7 @@ export default function MenuBar(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="menu-items-container" onSelect={handleNavigation}>
                     {
-                        props.menuBarItems.map((item, index) => {
+                        props.menuBarItems.filter(item => item.listInMenu).map((item, index) => {
                             if (item.type === "link") {
                                 return <Nav.Link key={item.name} href="#" eventKey={item.path}>{item.name}</Nav.Link>
                             } else {

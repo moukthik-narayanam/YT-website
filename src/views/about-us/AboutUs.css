@@ -1,0 +1,11 @@
+.about-us-container .nav-tabs #uncontrolled-tab-example-tab-members.active, .about-us-container .nav-tabs #uncontrolled-tab-example-tab-details.active {
+    color: #dc3545;
+}
+
+.about-us-container .nav-tabs #uncontrolled-tab-example-tab-members:hover, .about-us-container .nav-tabs #uncontrolled-tab-example-tab-details:hover {
+    color: #0056b3;
+}
+
+.about-us-container .nav-tabs #uncontrolled-tab-example-tab-members, .about-us-container .nav-tabs #uncontrolled-tab-example-tab-details {
+    color: #495057
+}

@@ -38,7 +38,7 @@ export default function Footer() {
                                     height={24}
                                     className="mr-3"
                                     src={process.env.PUBLIC_URL + '/images/facebook-logo.png'}
-                                    alt="Generic placeholder"
+                                    alt="facebook"
                                 />
                                 <Media.Body>
                                     Facebook
@@ -52,7 +52,7 @@ export default function Footer() {
                                     height={24}
                                     className="mr-3"
                                     src={process.env.PUBLIC_URL + '/images/linkedin-logo.png'}
-                                    alt="Generic placeholder"
+                                    alt="linkedin"
                                 />
                                 <Media.Body>
                                     Linkedin
@@ -66,7 +66,7 @@ export default function Footer() {
                                     height={24}
                                     className="mr-3"
                                     src={process.env.PUBLIC_URL + '/images/insta-logo.png'}
-                                    alt="Generic placeholder"
+                                    alt="instagram"
                                 />
                                 <Media.Body>
                                     Instagram

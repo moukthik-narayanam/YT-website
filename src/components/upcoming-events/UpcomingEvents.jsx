@@ -6,8 +6,8 @@ import { useHistory } from 'react-router-dom';
 
 export default function UpcomingEvents() {
     const history = useHistory();
-    function handleMoreEvents(){
-        // history.push("")
+    function handleMoreEvents() {
+        history.push("/more-events");
     }
     const eventsList = [1, 2, 3];
     // const activeList = 
