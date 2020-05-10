@@ -9,3 +9,7 @@
 .about-us-container .nav-tabs #uncontrolled-tab-example-tab-members, .about-us-container .nav-tabs #uncontrolled-tab-example-tab-details {
     color: #495057
 }
+
+.about-us-container{
+    margin-top: 60px;
+}

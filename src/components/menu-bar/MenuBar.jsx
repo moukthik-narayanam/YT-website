@@ -9,7 +9,7 @@ export default function MenuBar(props) {
         history.push(route);
     }
     return (
-        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top" className="position-sticky" >
+        <Navbar bg="dark-transparent" variant="dark" expand="lg" fixed="top">
             <Navbar.Brand href="home">
                 <img
                     src={process.env.PUBLIC_URL + '/images/logo-light.png'}
