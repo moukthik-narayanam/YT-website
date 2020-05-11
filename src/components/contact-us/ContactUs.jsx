@@ -29,9 +29,9 @@ export default function ContactUs() {
                             src="https://docs.google.com/forms/d/e/1FAIpQLSchu0Wy7daqnIKjXXg0cEuVnD5OcMJ8tL_tYzxO_Y38Ri8pTg/viewform?embedded=true"
                             width="640"
                             height="1240"
-                            frameborder="0"
-                            marginheight="0"
-                            marginwidth="0"
+                            frameBorder="0"
+                            marginHeight="0"
+                            marginWidth="0"
                             title="contact us form"
                         >
                             Loading…

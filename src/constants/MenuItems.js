@@ -83,28 +83,28 @@ export const MenuBarItems = [
     {
         type: "link",
         name: "Gallery",
-        path: "/link7",
+        path: "/gallery",
         listInMenu : true,
         component: HomePage
     },
     {
         type: "link",
         name: "In Media",
-        path: "/link8",
+        path: "/in-media",
         listInMenu : true,
         component: HomePage
     },
     {
         type: "link",
         name: "Join us",
-        path: "/link13",
+        path: "/join-us",
         listInMenu : true,
         component: HomePage
     },
     {
         type: "link",
         name: "Contact us",
-        path: "/Link3",
+        path: "/contact-us",
         listInMenu : true,
         component: ContactUs
     },

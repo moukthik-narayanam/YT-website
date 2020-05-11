@@ -23,7 +23,7 @@ export default function UpcomingEvents() {
             <Row className="justify-content-md-center mx-5 mb-4">
                 {
                     eventsList.map((index) => {
-                        return <Col className="px-2">
+                        return <Col key={index+`k`} className="px-2">
                             <Card style={{ width: '18rem' }} className="mt-3">
                                 <Card.Img variant="top" src={process.env.PUBLIC_URL + '/images/logo-light.png'} />
                                 <Card.Body>

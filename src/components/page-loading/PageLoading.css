@@ -1,0 +1,21 @@
+.page-loader-border {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    vertical-align: text-bottom;
+    border: .3em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: page-loader-border .75s linear infinite;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+@keyframes page-loader-border {
+    100%{
+        transform : translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
