@@ -29,7 +29,7 @@ export default function MenuBar(props) {
                             } else {
                                 return <NavDropdown key={item.name} active={true} title={item.name} id={`basic-nav-dropdown-${index}`}>
                                     {
-                                        item.dropdownItems.map((dropdownItem) => {
+                                        item.dropDownItems.map((dropdownItem) => {
                                             return <NavDropdown.Item key={dropdownItem.name} href="#" eventKey={dropdownItem.path}>{dropdownItem.name}</NavDropdown.Item>
                                         })
                                     }

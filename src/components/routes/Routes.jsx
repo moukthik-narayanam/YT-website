@@ -7,11 +7,22 @@ export const Routes = (props) => {
     <Switch>
       {routes.map((route, index) => {
         const { component: RouteComponent, dropDownItems, path } = route;
-        return <Route
-          exact={true}
-          key={index}
-          path={path}
-          render={() => <RouteComponent {...props} routes={dropDownItems} />} />;
+        if (path) {
+          return <Route
+            exact={true}
+            key={index}
+            path={path}
+            render={() => <RouteComponent {...props} routes={dropDownItems} />} />
+        } else {
+          return dropDownItems.map((route, index) => {
+            const { component: RouteComponent, dropDownItems, path } = route;
+            return <Route
+              exact={true}
+              key={index}
+              path={path}
+              render={() => <RouteComponent {...props} routes={dropDownItems} />} />
+          })
+        }
       })}
       <Redirect to={defaultRoute} />
     </Switch>

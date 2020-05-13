@@ -1,0 +1,16 @@
+.book-slot-text.active, .cutomer-details.active, .payment.active {
+    color: #dc3545;
+    border-bottom: 4px solid black;
+}
+
+.book-slot-text.done, .cutomer-details.done, .payment.done {
+    color: #108003;
+}
+
+.yt-rental-tabe-content-container {
+    background-color: aliceblue;
+}
+
+.rental-tab-links.active {
+    border-color: #17a2b8 #17a2b8 #fff !important;
+}

@@ -1,25 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Media, Accordion, Card, Row, Col, Button } from 'react-bootstrap';
-import { MembersList } from '../../constants/MembersList';
 import './YTMembers.css';
 
 export default function YTMembers() {
+    const [membersList, setMembersList] = useState([]);
     const [openId, setOpenId] = useState("0");
     const [showMoreId, setShowMoreId] = useState("");
-    function handleShowMore(e) {
-        setShowMoreId(e.currentTarget.id);
-    }
+
+    useEffect(() => {
+        fetch("/members")
+            .then(res => res.json())
+            .then(data => { setMembersList(data); });
+    }, []);
+
     function handleSelect(clickedId) {
         setOpenId(prevOpenId => {
             const newOpenId = prevOpenId === clickedId ? '' : clickedId;
             return newOpenId;
         })
     };
-
+    
     useEffect(() => {
         setShowMoreId("");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [openId])
+    
+    function handleShowMore(e) {
+        setShowMoreId(e.currentTarget.id);
+    }
 
     function handleShowLess() {
         setShowMoreId("");
@@ -28,7 +36,7 @@ export default function YTMembers() {
     return (
         <Container className="py-4 px-1 mt-2">
             <Accordion defaultActiveKey="0" onSelect={handleSelect} className="accordion-container">
-                {MembersList.map((group, index) => {
+                {membersList.map((group, index) => {
                     const icon = openId === `${index}` ? 'remove' : 'add';
                     const titleClass = openId === `${index}` ? 'text-danger' : '';
                     return <Card key={group.groupTitle}>
@@ -77,16 +85,16 @@ export default function YTMembers() {
                 })
                 }
                 <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey={`${MembersList.length + 1}`} >
+                    <Accordion.Toggle as={Card.Header} eventKey={`${membersList.length + 1}`} >
                         <Row className="justify-content-between">
-                            <div className={`group-titles ${openId === `${MembersList.length + 1}` ? 'text-danger' : ''} px-3`}>External Faculties</div>
+                            <div className={`group-titles ${openId === `${membersList.length + 1}` ? 'text-danger' : ''} px-3`}>External Faculties</div>
                             <div>
-                                <i className="material-icons px-3">{openId === `${MembersList.length + 1}` ? 'remove' : 'add'}</i>
+                                <i className="material-icons px-3">{openId === `${membersList.length + 1}` ? 'remove' : 'add'}</i>
                             </div>
                         </Row>
                     </Accordion.Toggle>
 
-                    <Accordion.Collapse eventKey={`${MembersList.length + 1}`}>
+                    <Accordion.Collapse eventKey={`${membersList.length + 1}`}>
                         <Container className="p-4">
                             <p>Learning at Yours Truly Theatre never stops. Every actor needs constant updation of skills, we at Yours Truly invite renowned personalities to conduct workshops on various skill sets and theatre formats on a need basis. These workshops are exclusively for Yours Truly Members only. Workshops range from 1 to 2-days. These workshops typically may not culminate in a performance as they are completely exploratory in nature.</p>
                             <p>Some of the workshops are meant to make an actor look deep within, some are meant to create an awareness on other theatre forms and formats.</p>

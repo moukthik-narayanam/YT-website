@@ -6,7 +6,7 @@ import './AboutUs.css';
 
 export default function AboutUs() {
     return (
-        <Container fluid className="p-4 about-us-container" >
+        <Container fluid className="p-4 page-container" >
             <Tabs defaultActiveKey="details" id="uncontrolled-tab-example">
                 <Tab eventKey="details" title="Details">
                     <YTDetails />

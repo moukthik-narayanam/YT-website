@@ -1,0 +1,21 @@
+.react-calendar {
+    box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+    border-radius: 4px;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    max-width: 350px;
+}
+
+.time-slots {
+    background-color: white;
+    box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+    border-radius: 4px;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.time-slots .input-group-text {
+    background-color: #f0f8ff;
+    border-width: 0px;
+}
