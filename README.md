@@ -1,3 +1,7 @@
+Website is hosted on https://yourstrulytheater.netlify.app/
+
+And for every PR to master or commit into master, project is built and deployed automatically.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
