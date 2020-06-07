@@ -43,7 +43,7 @@ export default function SlotBooking(props) {
   };
 
   function handleProceed() {
-    props.onProceed();
+    props.onProceed({ date: selectedDate, time: selectedSlots });
   }
 
   return (
@@ -68,7 +68,7 @@ export default function SlotBooking(props) {
         })}
       </Row>
       <Row className="m-2 justify-content-end">
-        <Button variant="dark" onClick={handleProceed}>{`Confirm & proceed`}</Button>
+        <Button variant="dark" disabled={selectedSlots.size === 0} onClick={handleProceed}>{`Confirm & proceed`}</Button>
       </Row>
     </Container>
   )

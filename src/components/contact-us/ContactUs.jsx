@@ -7,7 +7,7 @@ export default function ContactUs() {
     const [popupWidth, setPopupWidth] = useState(0);
     const history = useHistory();
     function handleFormClose() {
-        history.push("/home");
+        history.goBack();
     }
 
     useEffect(() => {

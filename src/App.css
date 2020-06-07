@@ -46,6 +46,17 @@
   margin-top: 60px;
 }
 
+.app-toast {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  padding: 10px;
+  box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+  border-width: 0px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

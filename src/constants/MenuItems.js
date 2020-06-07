@@ -4,6 +4,7 @@ const HomePage = lazy(() => import('../views/home-page/HomePage'));
 const AboutUs = lazy(() => import('../views/about-us/AboutUs'));
 const ContactUs = lazy(() => import('../components/contact-us/ContactUs'));
 const YTRental = lazy(() => import('../views/yt-rental/YTRental'));
+const EventBooking = lazy(()=> import ('../views/event-booking/EventBooking'));
 
 export const MenuBarItems = [
     {
@@ -113,5 +114,12 @@ export const MenuBarItems = [
         path: "/more-events",
         listInMenu: false,
         component: HomePage
+    },
+    {
+        type: "link",
+        name: "Event booking",
+        path: "/:eventId/eventBooking",
+        component: EventBooking,
+        listInMenu: false
     }
 ]
