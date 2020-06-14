@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { Modal, Container } from 'react-bootstrap';
-import './ContactUs.css';
+import './JoinUs.css';
 import { useHistory } from 'react-router-dom';
 
 export default function ContactUs() {
@@ -44,13 +44,13 @@ export default function ContactUs() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Contact us
+                        Join us
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="contact-us-form-container">
                         <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSchu0Wy7daqnIKjXXg0cEuVnD5OcMJ8tL_tYzxO_Y38Ri8pTg/viewform?embedded=true"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfJFkGsGhF8qXWcXjKIAjBxLGwsJpdHfTisl5mnOBREot-KMQ/viewform?embedded=true"
                             width={popupWidth}
                             height="1240"
                             frameBorder="0"

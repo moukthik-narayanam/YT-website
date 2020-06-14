@@ -1,4 +1,4 @@
-import React, { Suspense, useMemo, useState } from 'react';
+import React, { Suspense, useMemo, useState} from 'react';
 import MenuBar from "./components/menu-bar/MenuBar";
 import { MenuBarItems } from './constants/MenuItems';
 import { BrowserRouter } from 'react-router-dom';
@@ -14,6 +14,7 @@ const defaultToast = { open: false, message: "", class: "" };
 function App() {
 
   const [toast, setToast] = useState(defaultToast);
+
 
   function setToastToDefault() {
     setToast(defaultToast);

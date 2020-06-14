@@ -29,3 +29,25 @@
     font-size: 12px;
     text-align: center;
 }
+
+.footer-container #mc_embed_signup {
+    background-color: transparent;
+}
+
+.footer-container #mc_embed_signup .button {
+    background: #17a2b8;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+#mc_embed_signup label {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+#mce-EMAIL {
+    margin-right: 5px !important;
+    font-family: sans-serif;
+}

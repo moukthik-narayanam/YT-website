@@ -1,29 +1,38 @@
-import React from 'react';
-import { Container, Row, Form, Col, Button, ListGroup, Media } from 'react-bootstrap';
+import React, { useRef, useLayoutEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Container, Row, Col, ListGroup, Media } from 'react-bootstrap';
 import './Footer.css';
 
 export default function Footer() {
     const currentDate = new Date();
+    const footerRef = useRef();
+    const { location } = useHistory();
+
+    useLayoutEffect(() => {
+        if (location.pathname === "/contact-us") {
+            footerRef.current && footerRef.current.scrollIntoView();
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [location]);
+
     return (
-        <Container fluid className="footer-container px-5 pt-5 pb-2">
-            <Row className=" justify-content-md-center mb-2 subscribe-text">
-                <Col md="auto">
-                    Subscribe to get latest event updates.
-                </Col>
-            </Row>
-            <Form >
-                <Form.Row className="justify-content-md-center">
-                    <Col md="auto" className="my-1">
-                        <Form.Control type="email" placeholder="Email" />
-                        <Form.Control.Feedback type="invalid">
-                            Please provide a valid city.
-                            </Form.Control.Feedback>
-                    </Col >
-                    <Col md={"auto"} className="mt-1">
-                        <Button variant="info" type="submit">Submit</Button>
-                    </Col>
-                </Form.Row>
-            </Form>
+        <Container ref={footerRef} fluid className="footer-container px-5 pt-5 pb-2">
+            <div id="mc_embed_signup">
+                <form action={`https://yourstruly-theatre.us4.list-manage.com/subscribe/post?u=cdefc42822bf4c0e9675b4469&amp;id=109a75400e`} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">Subscribe to get latest event updates.</label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required />
+                        {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
+                        <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+                            <input type="text" name="b_cdefc42822bf4c0e9675b4469_109a75400e" tabindex="-1" value="" />
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div className="seperator-line w-100 mt-5 mb-2"></div>
             <Row className="justify-content-md-center">
                 <Col md={3} className="mt-1">
@@ -31,7 +40,7 @@ export default function Footer() {
                         <ListGroup.Item>
                             Follow us
                         </ListGroup.Item>
-                        <ListGroup.Item action href="#">
+                        <ListGroup.Item action href="https://www.facebook.com/yourstrulytheatre/">
                             <Media>
                                 <img
                                     width={24}
@@ -45,7 +54,7 @@ export default function Footer() {
                                 </Media.Body>
                             </Media>
                         </ListGroup.Item>
-                        <ListGroup.Item action href="#">
+                        <ListGroup.Item action href="https://www.linkedin.com/in/yours-truly-theatre-09742214/">
                             <Media>
                                 <img
                                     width={24}
@@ -59,7 +68,7 @@ export default function Footer() {
                                 </Media.Body>
                             </Media>
                         </ListGroup.Item>
-                        <ListGroup.Item action href="#">
+                        <ListGroup.Item action href="https://www.instagram.com/yourstruly_theatre/">
                             <Media>
                                 <img
                                     width={24}

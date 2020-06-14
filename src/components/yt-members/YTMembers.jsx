@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Media, Accordion, Card, Row, Col, Button } from 'react-bootstrap';
 import './YTMembers.css';
+import { MembersList } from '../../constants/MembersList';
 
 export default function YTMembers() {
-    const [membersList, setMembersList] = useState([]);
+    const [membersList, setMembersList] = useState(MembersList);
     const [openId, setOpenId] = useState("0");
     const [showMoreId, setShowMoreId] = useState("");
 
-    useEffect(() => {
-        fetch("/members")
-            .then(res => res.json())
-            .then(data => { setMembersList(data); });
-    }, []);
+    // useEffect(() => {
+    //     fetch("/members")
+    //         .then(res => res.json())
+    //         .then(data => { setMembersList(data); });
+    // }, []);
 
     function handleSelect(clickedId) {
         setOpenId(prevOpenId => {
@@ -19,12 +20,12 @@ export default function YTMembers() {
             return newOpenId;
         })
     };
-    
+
     useEffect(() => {
         setShowMoreId("");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [openId])
-    
+
     function handleShowMore(e) {
         setShowMoreId(e.currentTarget.id);
     }
@@ -65,11 +66,21 @@ export default function YTMembers() {
                                                 <Media.Body>
                                                     <h4>{member.name}</h4>
                                                     <p className="text-secondary"><i>{member.title}</i></p>
-                                                    <p>{member.description}</p>
-                                                    {showMoreId !== `${memberIndex}` && <Button onClick={handleShowMore} id={`${memberIndex}`} variant="link" className="p-0 text-secondary">Show more</Button>}
+                                                    {member.description.map((para) => {
+                                                        return <p>{para}</p>
+                                                    })}
+                                                    {member.additionalLinks &&
+                                                        <Button className="p-0" variant="link" href={member.additionalLinks.link} >{member.additionalLinks.text}</Button>
+                                                    }
+
+                                                    {showMoreId !== `${memberIndex}`
+                                                        && member.extendedDescription.length > 0
+                                                        && <Button onClick={handleShowMore} id={`${memberIndex}`} variant="link" className="p-0 text-secondary">Show more</Button>}
                                                     {showMoreId === `${memberIndex}` &&
                                                         <>
-                                                            <p>{member.extendedDescription}</p>
+                                                        {member.extendedDescription.map((para) => {
+                                                            return <p>{para}</p>
+                                                        })}
                                                             <Button onClick={handleShowLess} variant="link" className="p-0 text-secondary">Show less</Button>
                                                         </>
                                                     }
